@@ -7,7 +7,8 @@
                 <h2>Laravel 8 CRUD </h2>
             </div>
             <div class="pull-right">
-                <a class="btn btn-success" href="{{ route('events.create') }}" title="Create a project"> <i class="fas fa-plus-circle"></i>
+                <a class="btn btn-success" href="{{ route('events.create') }}" title="Create a project"> <i
+                        class="fas fa-plus-circle"></i>
                 </a>
             </div>
         </div>
@@ -58,7 +59,11 @@
             <tr>
                 <td>{{ ++$i }}</td>
                 <td>{{ $event->name }}</td>
-                <td>{{ $event->description }}</td>
+                <td>
+                    <textarea readonly >
+                        {{ $event->description }}
+                    </textarea>
+                </td>
                 <td>
                     <img src="images/{{ $event->image }}" width="200px" alt="">
                 </td>

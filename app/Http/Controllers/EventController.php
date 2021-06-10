@@ -46,7 +46,7 @@ class EventController extends Controller
             }]
         ])
             ->orderBy('id', 'desc')
-            ->paginate(3);
+            ->paginate(1);
 
         return view('events.index',
             compact('events'))->with('i', (request()->input('page', 1) - 1) * 5)
