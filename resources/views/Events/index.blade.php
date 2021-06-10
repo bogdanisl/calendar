@@ -93,6 +93,6 @@
         @endforeach
     </table>
 
-    {!! $events->links() !!}
+    {!! $events->appends(['term'=>$termgit])->links() !!}
 
 @endsection
