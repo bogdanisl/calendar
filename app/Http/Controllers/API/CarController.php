@@ -68,6 +68,13 @@ class CarController extends Controller
     public function update(Request $request, $id)
     {
         //
+        try {
+            $car = $request->all();
+            Car::query()->firstOrFail($id)->insert($car);
+        } catch (\Exception  $e) {
+            return response(['error' => $e->getMessage()]);
+        }
+        return response(['message', 'car updated']);
     }
 
     /**

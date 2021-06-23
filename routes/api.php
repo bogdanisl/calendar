@@ -28,4 +28,6 @@ Route::get('/cars', [App\Http\Controllers\API\CarController::class, "index"]);
 Route::post('/cars/store', [App\Http\Controllers\API\CarController::class, "store"]);
 Route::get('/cars/show/{id}', [App\Http\Controllers\API\CarController::class, "show"]);
 Route::delete('/cars/delete/{id}', [App\Http\Controllers\API\CarController::class, "destroy"]);
+Route::put('/cars/update/{id}', [App\Http\Controllers\API\CarController::class, "update"]);
+
 
